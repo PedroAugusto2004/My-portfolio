@@ -33,6 +33,7 @@ const sr = ScrollReveal({
     reset: true
 });
 
+
 /*SCROLL HOME*/
 sr.reveal('.home_title',{}); 
 sr.reveal('.button',{delay: 200}); 
@@ -44,14 +45,37 @@ sr.reveal('.about_img',{});
 sr.reveal('.about_subtitle',{delay: 400}); 
 sr.reveal('.about_text',{delay: 400}); 
 
-/*SCROLL SKILLS*/
-sr.reveal('.skills_subtitle',{}); 
-sr.reveal('.skills_text',{}); 
-sr.reveal('.skills_data',{interval: 200}); 
-sr.reveal('.skills_img',{delay: 600});
+ScrollReveal().reveal('.about_skills li, .about_education li', {
+    origin: 'bottom',
+    distance: '50px',
+    duration: 1000,
+    delay: 100,
+    interval: 200, // Adds a delay between each list item reveal
+    opacity: 0,
+    easing: 'ease-out',
+});
+
+// Open the image in the modal
+function openImageModal(image) {
+    var modal = document.getElementById("imageModal");
+    var modalImage = document.getElementById("modalImage");
+    modal.style.display = "block"; // Show the modal
+    modalImage.src = image.src; // Set the image source to the clicked image
+}
+
+// Close the modal
+function closeImageModal() {
+    var modal = document.getElementById("imageModal");
+    modal.style.display = "none"; // Hide the modal when clicked outside
+}
 
 /*SCROLL WORK*/
-sr.reveal('.work_img',{interval: 200}); 
-
+ScrollReveal().reveal('.work_main_project, .work_card', {
+    distance: '20px',
+    duration: 1000,
+    delay: 300,
+    opacity: 0,
+    easing: 'ease-in-out',
+});
 /*SCROLL CONTACT*/
 sr.reveal('.contact_input',{interval: 200}); 
