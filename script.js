@@ -66,7 +66,7 @@ function openImageModal(image) {
 // Close the modal
 function closeImageModal() {
     var modal = document.getElementById("imageModal");
-    modal.style.display = "none"; // Hide the modal when clicked outside
+    modal.style.display = "none"; // Hide the modal
 }
 
 /*SCROLL WORK*/

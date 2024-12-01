@@ -374,25 +374,6 @@ img {
   border-radius: 10px; /* Optional: rounded corners */
 }
 
-/* Close button styles */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Hover effect for the close button */
-.close:hover,
-.close:focus {
-  color: #ddd;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /* Styling for the education list items */
 .about_education {
   list-style-type: none; /* Remove default list bullets */
