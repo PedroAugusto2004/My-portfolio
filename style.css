@@ -130,7 +130,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #40555f88;
+  background-color: #0e2431;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -211,6 +211,7 @@ img {
 
 .nav_link:hover {
   position: relative;
+  color: #fff;
 }
 
 .nav_link:hover::after {
@@ -220,7 +221,7 @@ img {
   height: 00.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--second-color);
+  background-color: #4070f4;
 }
 
 .nav_logo {
@@ -685,10 +686,6 @@ button {
 
   .nav_toggle {
     display: none;
-  }
-
-  .nav_link {
-    color: var(--second-color);
   }
 
   .home {

@@ -10,6 +10,19 @@ document.getElementById('nav-toggle').addEventListener('click', function () {
     }
 });
 
+// Close the hamburger menu when a shortcut link is clicked
+document.querySelectorAll('.nav_link').forEach(link => {
+    link.addEventListener('click', () => {
+        const checkbox = document.querySelector('#nav-toggle input');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (checkbox) {
+            checkbox.checked = false; // Uncheck the checkbox
+            navMenu.classList.remove('show'); // Hide the menu
+        }
+    });
+});
+
 /*===== ACTIVE AND REMOVE MENU =====*/
 const navLink = document.querySelectorAll('.nav_link');   
 
