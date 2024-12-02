@@ -501,7 +501,7 @@ button {
 
 /* Optional: Add hover effect for the tip */
 .work_card:hover .project-tip {
-  color: #1E90FF; /* Change to a highlight color on hover */
+  color: #01305f; /* Change to a highlight color on hover */
 }
 
 .work_main_project .work_card {
@@ -537,7 +537,7 @@ button {
 
 .work_card h3 {
   margin: 0.5rem 0;
-  font-size: 1.25rem;
+  font-size: 1.7rem;
   color: #333;
 }
 
