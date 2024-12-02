@@ -1,15 +1,14 @@
 /*===== MENU SHOW =====*/ 
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+document.getElementById('nav-toggle').addEventListener('click', function () {
+    const navMenu = document.getElementById('nav-menu');
+    const checkbox = this.querySelector('input');
 
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
+    if (checkbox.checked) {
+        navMenu.classList.add('show');
+    } else {
+        navMenu.classList.remove('show');
     }
-}
-showMenu('nav-toggle','nav-menu')
+});
 
 /*===== ACTIVE AND REMOVE MENU =====*/
 const navLink = document.querySelectorAll('.nav_link');   

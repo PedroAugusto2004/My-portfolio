@@ -144,6 +144,45 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  .hamburger {
+    cursor: pointer;
+    z-index: 10; /* Ensure it appears above other elements */
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger svg {
+    height: 2em; /* Decreased size */
+    width: 2em;  /* Optional: Ensure width matches height */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+  
+  /* Update for nav menu toggle */
   .nav_menu {
     position: fixed;
     top: var(--header-height);
@@ -152,9 +191,14 @@ img {
     height: 100%;
     padding: 2rem;
     background-color: var(--second-color);
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
+    z-index: 9; /* Ensure it's below the hamburger menu */
   }
-}
+  
+  .nav_toggle input:checked ~ .nav_menu {
+    right: 0;
+  }
+  }
 
 .nav_item {
   margin-bottom: var(--mb-4);
