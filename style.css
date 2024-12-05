@@ -87,6 +87,12 @@ img {
   display: block;
 }
 
+/*--SCROLLBAR--*/
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #0e2431 #ffffff; /* Thumb color and track color */
+}
+
 /* CSS CLASS */
 .section_title {
   position: relative;
