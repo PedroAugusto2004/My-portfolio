@@ -82,12 +82,23 @@ function closeImageModal() {
 }
 
 /*SCROLL WORK*/
-ScrollReveal().reveal('.work_main_project, .work_card', {
-    distance: '20px',
-    duration: 1000,
-    delay: 300,
-    opacity: 0,
-    easing: 'ease-in-out',
+ScrollReveal().reveal('.work_main_project', {
+    distance: '40px',
+    duration: 1200,
+    delay: 200,
+    origin: 'bottom',
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 200
 });
+
+ScrollReveal().reveal('.work_card', {
+    distance: '30px',
+    duration: 1000,
+    delay: 100,
+    origin: 'bottom',
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 200
+});
+
 /*SCROLL CONTACT*/
-sr.reveal('.contact_input',{interval: 200}); 
+sr.reveal('.contact_input',{interval: 200});

@@ -165,6 +165,18 @@ img {
     transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   
+    
+  .footer_icon svg {
+        width: 24px;
+        height: 24px;
+        transition: 0.3s;
+    }
+    
+  .footer_icon:hover svg {
+        color: var(--first-color);
+        transform: translateY(-0.25rem);
+    }  
+    
   .line {
     fill: none;
     stroke: white;
@@ -532,32 +544,369 @@ button {
   margin: 0 auto; /* Keep it centered */
   text-align: center; /* Ensure content is centered */
   padding: 2rem; /* Optional: Add padding for spacing */
-}
-
-.work_main_project .work_card img {
-  width: 60%; /* Adjust the width to a smaller value */
-  max-width: 400px; /* Set a maximum width to prevent it from growing too large */
-  margin: 0 auto; /* Center the image */
-  transition: transform 0.5s ease;
-}
-
-/* Styling for the project tip */
-.project-tip {
-  font-size: 1rem;
-  color: #333; /* Dark gray for contrast */
-  margin-top: 1rem;
-  font-style: italic;
-  transition: color 0.3s ease;
-}
-
-/* Optional: Add hover effect for the tip */
-.work_card:hover .project-tip {
-  color: #01305f; /* Change to a highlight color on hover */
+  position: relative;
 }
 
 .work_main_project .work_card {
   text-align: center;
   padding: 2rem; /* Add some padding to make the content more balanced */
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(64, 112, 244, 0.1);
+  border-radius: 20px;
+  box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.08),
+      0 0 0 1px rgba(64, 112, 244, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.work_main_project .work_card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      45deg,
+      rgba(64, 112, 244, 0.05) 0%,
+      rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 0;
+}
+
+.work_main_project .work_card img {
+  width: 60%; /* Adjust the width to a smaller value */
+  max-width: 350px; /* Set a maximum width to prevent it from growing too large */
+  margin: 0 auto; /* Center the image */
+  transition: transform 0.5s ease;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 1;
+}
+
+.work_main_project .work_card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.8rem; /* Reduced from 2.2rem */
+  color: #333;
+  background: linear-gradient(135deg, var(--second-color), var(--first-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.work_main_project .work_card p {
+  font-size: 1rem; /* Reduced from 1.1rem */
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.6; /* Reduced from 1.7 */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover Effects */
+.work_main_project .work_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.12),
+      0 0 0 2px rgba(64, 112, 244, 0.1);
+}
+
+.work_main_project .work_card:hover img {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Tip Premium Style */
+.project-tip {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background: rgba(64, 112, 244, 0.05);
+  border-radius: 12px;
+  display: inline-block;
+  border: 1px solid rgba(64, 112, 244, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.work_main_project .work_card:hover .project-tip {
+  color: var(--first-color);
+  background: rgba(64, 112, 244, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Premium Main Project Styling */
+.work_main_project {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    position: relative;
+}
+
+.work_main_project .work_card {
+    background: linear-gradient(165deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 3rem 2.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(64, 112, 244, 0.12);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(64, 112, 244, 0.05),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Decorative elements */
+.work_main_project .work_card::before,
+.work_main_project .work_card::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--first-color), transparent);
+    opacity: 0.1;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.work_main_project .work_card::before {
+    width: 150px;
+    height: 150px;
+    top: -75px;
+    left: -75px;
+}
+
+.work_main_project .work_card::after {
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+    right: -50px;
+}
+
+.work_main_project .work_card img {
+    width: 65%;
+    max-width: 350px;
+    margin: 0 auto 2rem;
+    border-radius: 16px;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(64, 112, 244, 0.08);
+    transform: translateY(0);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.work_main_project .work_card h3 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    background: linear-gradient(135deg, var(--second-color) 0%, var(--first-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 2;
+}
+
+.work_main_project .work_card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Enhanced hover effects */
+.work_main_project .work_card:hover {
+    transform: translateY(-12px) scale(1.01);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.12),
+        0 0 0 2px rgba(64, 112, 244, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.work_main_project .work_card:hover::before {
+    transform: scale(2) rotate(-15deg);
+    opacity: 0.15;
+}
+
+.work_main_project .work_card:hover::after {
+    transform: scale(2) rotate(15deg);
+    opacity: 0.15;
+}
+
+.work_main_project .work_card:hover img {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(64, 112, 244, 0.1);
+}
+
+/* Premium Project Tip */
+.project-tip {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    background: rgba(64, 112, 244, 0.05);
+    border-radius: 16px;
+    display: inline-block;
+    border: 1px solid rgba(64, 112, 244, 0.12);
+    backdrop-filter: blur(10px);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.05),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.work_main_project .work_card:hover .project-tip {
+    color: var(--first-color);
+    background: rgba(64, 112, 244, 0.08);
+    transform: translateY(-5px);
+    box-shadow: 
+        0 8px 20px rgba(64, 112, 244, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .work_main_project .work_card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .work_main_project .work_card h3 {
+        font-size: 1.75rem;
+    }
+    
+    .work_main_project .work_card img {
+        width: 75%;
+    }
+}
+
+/* Premium Main Project Styling with Sparkle Effects */
+.work_main_project .work_card {
+    background: linear-gradient(165deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 3rem 2.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(64, 112, 244, 0.3);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(64, 112, 244, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6),
+        0 0 15px rgba(64, 112, 244, 0.15);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Sparkle Effects */
+.work_main_project .work_card::before,
+.work_main_project .work_card::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(64, 112, 244, 0.2),
+        rgba(64, 112, 244, 0.4),
+        rgba(64, 112, 244, 0.2),
+        transparent
+    );
+    width: 200%;
+    height: 200%;
+    animation: sparkle 4s linear infinite;
+}
+
+.work_main_project .work_card::before {
+    top: -100%;
+    left: -100%;
+    transform: rotate(45deg);
+}
+
+.work_main_project .work_card::after {
+    bottom: -100%;
+    right: -100%;
+    transform: rotate(225deg);
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+    0% {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(50%) translateY(50%) rotate(180deg);
+    }
+}
+
+/* Enhanced Hover Effects */
+.work_main_project .work_card:hover {
+    transform: translateY(-12px) scale(1.01);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.12),
+        0 0 0 2px rgba(64, 112, 244, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.7),
+        0 0 20px rgba(64, 112, 244, 0.3);
+    border-color: rgba(64, 112, 244, 0.5);
+}
+
+/* Enhanced Image Effects */
+.work_main_project .work_card img {
+    border: 1px solid rgba(64, 112, 244, 0.2);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(64, 112, 244, 0.1),
+        0 0 15px rgba(64, 112, 244, 0.1);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Enhanced Title Gradient */
+.work_main_project .work_card h3 {
+    background: linear-gradient(135deg, 
+        #0e2431 0%,
+        #4070f4 50%,
+        #1e90ff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 15px rgba(64, 112, 244, 0.15);
+}
+
+/* Enhanced Project Tip */
+.project-tip {
+    background: rgba(64, 112, 244, 0.08);
+    border: 1px solid rgba(64, 112, 244, 0.2);
+    box-shadow: 
+        0 4px 15px rgba(64, 112, 244, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.work_main_project .work_card:hover .project-tip {
+    background: rgba(64, 112, 244, 0.12);
+    border-color: rgba(64, 112, 244, 0.3);
+    box-shadow: 
+        0 8px 20px rgba(64, 112, 244, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 
 .work_card {
@@ -587,16 +936,15 @@ button {
 }
 
 .work_card h3 {
-  margin: 0.5rem 0;
-  font-size: 1.7rem;
+  font-size: 1.8rem; /* Reduced from 2.2rem */
   color: #333;
 }
 
 .work_card p {
-  font-size: 0.9rem;
+  font-size: 1rem; /* Reduced from 1.1rem */
   color: #666;
   margin-bottom: 0.5rem;
-  line-height: 1.5;
+  line-height: 1.6; /* Reduced from 1.7 */
 }
 
 .work_container {
@@ -607,6 +955,112 @@ button {
 
 .work_side_projects {
   margin-top: 2rem;
+}
+
+/* Update Work section styles */
+.work.section {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+}
+
+/* Main Project Card improvements */
+.work_main_project {
+    width: 80%; /* Reduced from 90% */
+    max-width: 600px; /* Reduced from 800px */
+    margin: 0 auto 3rem auto; /* Reduced bottom margin from 4rem */
+}
+
+.work_main_project .work_card {
+    padding: 2rem; /* Reduced from 2.5rem */
+}
+
+.work_main_project .work_card img {
+    width: 60%; /* Reduced from 70% */
+    max-width: 350px; /* Reduced from 450px */
+    margin: 0 auto 1rem; /* Reduced bottom margin from 1.5rem */
+}
+
+.work_main_project .work_card h3 {
+    font-size: 1.8rem; /* Reduced from 2.2rem */
+    margin: 0.8rem 0; /* Reduced from 1rem */
+}
+
+.work_main_project .work_card p {
+    font-size: 1rem; /* Reduced from 1.1rem */
+    line-height: 1.6; /* Reduced from 1.7 */
+    max-width: 500px; /* Reduced from 600px */
+}
+
+/* Side Projects improvements */
+.work_side_projects {
+    margin-top: 4rem;
+}
+
+.work_container {
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+
+.work_card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(64, 112, 244, 0.12);
+}
+
+.work_card img {
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+.work_card h3 {
+    font-size: 1.5rem;
+    color: var(--second-color);
+    margin: 1rem 0;
+}
+
+.work_card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Project tip enhancement */
+.project-tip {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 1.2rem;
+    font-style: italic;
+    padding: 0.5rem 1rem;
+    background-color: rgba(64, 112, 244, 0.05);
+    border-radius: 0.5rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.work_card:hover .project-tip {
+    color: var(--first-color);
+    background-color: rgba(64, 112, 244, 0.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .work_main_project {
+        width: 90%; /* Adjusted for smaller screens */
+        padding: 1rem; /* Reduced from 1.5rem */
+    }
+
+    .work_main_project .work_card h3 {
+        font-size: 1.5rem; /* Reduced from 1.8rem */
+    }
 }
 
 /*================ CONTACT ===============*/
@@ -652,8 +1106,29 @@ button {
 
 .footer_icon {
   font-size: 1.5rem;
-  color: #fff;
-  margin: 0 var(--mb-2);
+  margin: 0 1rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_icon i,
+.footer_icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #fff;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.footer_icon:hover i,
+.footer_icon:hover svg {
+    color: var(--first-color);
+    transform: translateY(-0.25rem) scale(1.1);
 }
 
 /*============= Media Queries =============*/
