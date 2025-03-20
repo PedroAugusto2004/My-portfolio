@@ -40,7 +40,8 @@
       {
         "list": "off"
       }
-    ]
+    ],
+    "css-prefix-order": "off"
   },
   "browserslist": [
     "defaults",
