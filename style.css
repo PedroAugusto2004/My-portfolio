@@ -242,6 +242,22 @@ img {
   background-color: #4070f4;
 }
 
+.nav_link::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: var(--first-color);
+  transition: width 0.3s ease;
+}
+
+.nav_link.active::after {
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
 .nav_logo {
   color: var(--second-color);
 }
