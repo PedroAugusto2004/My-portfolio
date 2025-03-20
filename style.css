@@ -583,7 +583,6 @@ button {
   margin: 0 auto; /* Center the image */
   transition: transform 0.5s ease;
   border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transform: translateY(0);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
@@ -625,7 +624,6 @@ button {
 
 .work_main_project .work_card:hover img {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 /* Project Tip Premium Style */
@@ -703,10 +701,6 @@ button {
     max-width: 350px;
     margin: 0 auto 2rem;
     border-radius: 16px;
-    box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.15),
-        0 0 0 1px rgba(64, 112, 244, 0.08);
-    transform: translateY(0);
     transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     z-index: 2;
@@ -736,10 +730,6 @@ button {
 /* Enhanced hover effects */
 .work_main_project .work_card:hover {
     transform: translateY(-12px) scale(1.01);
-    box-shadow: 
-        0 30px 60px rgba(0, 0, 0, 0.12),
-        0 0 0 2px rgba(64, 112, 244, 0.15),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.6);
 }
 
 .work_main_project .work_card:hover::before {
@@ -754,9 +744,6 @@ button {
 
 .work_main_project .work_card:hover img {
     transform: translateY(-8px) scale(1.03);
-    box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(64, 112, 244, 0.1);
 }
 
 /* Premium Project Tip */
@@ -770,10 +757,6 @@ button {
     display: inline-block;
     border: 1px solid rgba(64, 112, 244, 0.12);
     backdrop-filter: blur(10px);
-    box-shadow: 
-        0 4px 15px rgba(0, 0, 0, 0.05),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     z-index: 2;
 }
@@ -782,9 +765,6 @@ button {
     color: var(--first-color);
     background: rgba(64, 112, 244, 0.08);
     transform: translateY(-5px);
-    box-shadow: 
-        0 8px 20px rgba(64, 112, 244, 0.15),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 /* Responsive adjustments */
@@ -804,7 +784,7 @@ button {
 
 /* Premium Main Project Styling with Sparkle Effects */
 .work_main_project .work_card {
-    background: linear-gradient(165deg, #ffffff 0%, #f8f9fa 100%);
+    background: transparent;
     padding: 3rem 2.5rem;
     border-radius: 24px;
     border: 1px solid rgba(64, 112, 244, 0.3);
@@ -827,9 +807,9 @@ button {
     background: linear-gradient(
         45deg,
         transparent,
-        rgba(64, 112, 244, 0.2),
-        rgba(64, 112, 244, 0.4),
-        rgba(64, 112, 244, 0.2),
+        rgba(64, 112, 244, 0.651),
+        rgba(64, 112, 244, 0.651),
+        rgba(64, 112, 244, 0.651),
         transparent
     );
     width: 200%;
@@ -870,15 +850,6 @@ button {
     border-color: rgba(64, 112, 244, 0.5);
 }
 
-/* Enhanced Image Effects */
-.work_main_project .work_card img {
-    border: 1px solid rgba(64, 112, 244, 0.2);
-    box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.15),
-        0 0 0 1px rgba(64, 112, 244, 0.1),
-        0 0 15px rgba(64, 112, 244, 0.1);
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
 
 /* Enhanced Title Gradient */
 .work_main_project .work_card h3 {
@@ -1254,4 +1225,14 @@ button {
 
  button2:active {
   transform: scale(0.95);
+}
+
+.transparent-bg {
+  mix-blend-mode: multiply; /* This helps remove white/light backgrounds */
+  filter: brightness(1.05); /* Optional: slightly increase brightness */
+}
+
+/* Improve contrast against any background */
+.work_main_project .work_card {
+  background: transparent; /* Make card background transparent */
 }
